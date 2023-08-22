@@ -1,3 +1,4 @@
+// import {userName} from './signup'
 const loginFormEl = document.forms.loginForm;
 const { email, password } = loginFormEl;
 const namechangeEl = document.getElementById("user-name-change");
@@ -22,7 +23,7 @@ loginFormEl.addEventListener("submit", (event) => {
       "you redirect to Home page in few second",
       "bg-info text-white p-2 w-100"
     );
-    nameChange();
+    // namechangeEl.innerText = `Hi ${userName}`;
     setTimeout(() => {
       document.location.href = "http://127.0.0.1:5500/index.html";
     }, 4000);
@@ -31,9 +32,6 @@ loginFormEl.addEventListener("submit", (event) => {
   }
 });
 
-function nameChange() {
-  namechangeEl.innerText = "Hi Lokesh";
-}
 
 function setMessage(msg, className) {
   const div = document.createElement("div");

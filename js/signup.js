@@ -1,4 +1,5 @@
 const formElement = document.forms.formApplication;
+const uName = document.getElementById("userName");
  const {
   userName,
   email,
@@ -10,6 +11,7 @@ const formElement = document.forms.formApplication;
 
 formElement.addEventListener("submit", (event) => {
   event.preventDefault();
+
   if (
     userName.value === "" ||
     email.value === "" ||
@@ -72,4 +74,5 @@ function setMessage(msg, className) {
 //     ])
 //   );
 // }
+
 export default userName;
