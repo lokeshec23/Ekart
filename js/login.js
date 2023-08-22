@@ -46,4 +46,4 @@ function setMessage(msg, className) {
     div.remove();
   }, 3000);
 }
-console.dir(document.location.href);
+

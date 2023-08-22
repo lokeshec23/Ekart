@@ -1,5 +1,5 @@
 const formElement = document.forms.formApplication;
-const {
+ const {
   userName,
   email,
   phoneNumber,
@@ -72,3 +72,4 @@ function setMessage(msg, className) {
 //     ])
 //   );
 // }
+export default userName;
