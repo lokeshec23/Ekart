@@ -19,14 +19,14 @@ loginFormEl.addEventListener("submit", (event) => {
     );
   } else if (getEmail === cEmail && getPwd === cpassword) {
     setMessage(`Login successfully!`, `bg-success text-white p-2 w-100`);
-    setMessage(
-      "you redirect to Home page in few second",
-      "bg-info text-white p-2 w-100"
-    );
-    // namechangeEl.innerText = `Hi ${userName}`;
-    setTimeout(() => {
-      document.location.href = "http://127.0.0.1:5500/index.html";
-    }, 4000);
+    // setMessage(
+    //   "you redirect to Home page in few second",
+    //   "bg-info text-white p-2 w-100"
+    // );
+    // // namechangeEl.innerText = `Hi ${userName}`;
+    // setTimeout(() => {
+    //   document.location.href = "http://index.html";
+    // }, 4000);
   } else {
     setMessage("Invalid Email or Password!", "bg-danger text-white p-2 w-100");
   }

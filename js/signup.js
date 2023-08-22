@@ -1,6 +1,6 @@
 const formElement = document.forms.formApplication;
 const uName = document.getElementById("userName");
- const {
+const {
   userName,
   email,
   phoneNumber,
@@ -29,13 +29,13 @@ formElement.addEventListener("submit", (event) => {
   } else {
     setLocalStorage(); // Set local storage
     setMessage(`Account Created Successfully!`, `bg-success text-white p-2 `);
-    setMessage(
-      "you redirect to login page in few second",
-      "bg-info text-white p-2 w-100"
-    );
-    setTimeout(() => {
-      document.location.href = "http://127.0.0.1:5500/login.html";
-    }, 4000);
+    // setMessage(
+    //   "you redirect to login page in few second",
+    //   "bg-info text-white p-2 w-100"
+    // );
+    // setTimeout(() => {
+    //   document.location.href = "http:/login.html";
+    // }, 4000);
   }
   resetInput(); // Reset Input
 });
