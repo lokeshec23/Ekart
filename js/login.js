@@ -1,10 +1,8 @@
-
 const loginFormEl = document.forms.loginForm;
 const { email, password } = loginFormEl;
-const namechange = document.getElementById("user-name-change");
+const namechangeEl = document.getElementById("user-name-change");
 
 loginFormEl.addEventListener("submit", (event) => {
-
   event.preventDefault();
 
   const cEmail = email.value;
@@ -13,12 +11,22 @@ loginFormEl.addEventListener("submit", (event) => {
   var getEmail = localStorage.getItem("email", email.value);
   var getPwd = localStorage.getItem("password", password.value);
   //get data from local
-  if (getEmail === cEmail && getPwd === cpassword) {
+  if (cEmail === "" && cpassword === "") {
+    setMessage(
+      "Please Enter Email and Password",
+      "bg-warning text-white p-2 w-100"
+    );
+  } else if (getEmail === cEmail && getPwd === cpassword) {
     setMessage(`Login successfully!`, `bg-success text-white p-2 w-100`);
+    nameChange();
   } else {
     setMessage("Invalid Email or Password!", "bg-danger text-white p-2 w-100");
   }
 });
+
+function nameChange() {
+  namechangeEl.innerText = "Hi Lokesh";
+}
 
 function setMessage(msg, className) {
   const div = document.createElement("div");

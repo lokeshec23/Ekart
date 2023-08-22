@@ -1,5 +1,5 @@
 const formElement = document.forms.formApplication;
-export const {
+const {
   userName,
   email,
   phoneNumber,
