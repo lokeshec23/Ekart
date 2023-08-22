@@ -1,7 +1,7 @@
 // import {userName} from './signup'
 const loginFormEl = document.forms.loginForm;
 const { email, password } = loginFormEl;
-const namechangeEl = document.getElementById("user-name-change");
+// const namechangeEl = document.getElementById("user-name-change");
 
 loginFormEl.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -32,7 +32,6 @@ loginFormEl.addEventListener("submit", (event) => {
   }
 });
 
-
 function setMessage(msg, className) {
   const div = document.createElement("div");
   const p = document.createElement("p");
@@ -44,4 +43,5 @@ function setMessage(msg, className) {
     div.remove();
   }, 3000);
 }
+
 

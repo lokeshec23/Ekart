@@ -29,6 +29,13 @@ formElement.addEventListener("submit", (event) => {
   } else {
     setLocalStorage(); // Set local storage
     setMessage(`Account Created Successfully!`, `bg-success text-white p-2 `);
+    setMessage(
+      "you redirect to login page in few second",
+      "bg-info text-white p-2 w-100"
+    );
+    setTimeout(() => {
+      document.location.href = "http://127.0.0.1:5500/login.html";
+    }, 4000);
   }
   resetInput(); // Reset Input
 });
@@ -57,7 +64,7 @@ function setMessage(msg, className) {
   formElement.prepend(div);
   setTimeout(() => {
     div.remove();
-  }, 2000);
+  }, 3000);
 }
 
 // function setLocalStorage() {

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input
+      type="text"
+      name=""
+      id=""
+      onkeypress="return onlyAlphabet(event, input)"
+    />
+    <script>
+      function onlyAlphabet(event, input) {
+        var charCode = event.which || event.keyCode;
+
+        if (
+          (charCode >= 65 && charCode <= 90) ||
+          (charCode >= 97 && charCode <= 122) ||
+          charCode === 8
+        ) {
+          return true; // Allow uppercase and lowercase letters, and Backspace
+        } else {
+          event.preventDefault();
+          return false; // Block other characters, including spaces
+        }
+      }
+    </script>
+  </body>
+</html>
