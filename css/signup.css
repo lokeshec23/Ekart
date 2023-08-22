@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+}
+
+html, body{
+    background: whitesmoke;
+} 
+
+#signup-img{
+    width: 100%;  
+    /* height: fit-content;*/
+    margin: 75px  auto; 
+    /* padding: 5; */
+    opacity: 0.5;
+}
